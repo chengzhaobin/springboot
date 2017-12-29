@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.3.7.RELEASE</version>
+		<version>1.5.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -22,26 +22,53 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		 <mysql-connector>5.1.39</mysql-connector>
+     	 <druid>1.0.18</druid>
+     	 <pagehelper>4.1.6</pagehelper>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
+	<!-- 	<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
+		</dependency> -->
 		<!-- 监控模块 -->
-			<dependency>
+			<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency> -->
+		
+		<!--  springboot 集成mybatis-->
+		<dependency>
+		    <groupId>org.mybatis.spring.boot</groupId>
+		    <artifactId>mybatis-spring-boot-starter</artifactId>
+		   <version>1.0.0</version>
 		</dependency>
-	</dependencies>
+		
+		 <!-- MySQL 连接驱动依赖 -->
+       <dependency>
+           <groupId>mysql</groupId>
+           <artifactId>mysql-connector-java</artifactId>
+       </dependency>
+       <!-- Druid 数据连接池依赖 -->
+       <dependency>
+           <groupId>com.alibaba</groupId>
+           <artifactId>druid</artifactId>
+           <version>${druid}</version>
+       </dependency>
 
+       <!-- 分页插件 -->  
+       <dependency>  
+           <groupId>com.github.pagehelper</groupId>  
+           <artifactId>pagehelper</artifactId>  
+           <version>${pagehelper}</version>  
+       </dependency>  
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
