@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ande.dao.UserMapper">
+  <select id="getPage" resultType="com.ande.model.User">
+    select user_name as userName,password from t_user
+  </select>
+  <select id="insert" parameterType="com.ande.model.User">
+   insert into t_user(user_name, password) values("11", "22")
+  </select>
+</mapper>
